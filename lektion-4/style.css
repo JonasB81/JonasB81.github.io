@@ -1,0 +1,16 @@
+.grid-200-1-fr-200 {
+display: grid;    
+grid-template-columns: 200px 1fr 200px;
+max-width: 1200px;
+margin: 20px auto;
+}
+
+.grid-repeat-3-1fr {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    max-width: 1200px;
+    margin: 20px auto;
+}
+.container > div{
+    border: 1px solid gray;
+   }

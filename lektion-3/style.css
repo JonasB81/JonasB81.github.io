@@ -1,0 +1,63 @@
+@import url('https://fonts.googleapis.com/css2?family=Barrio&family=DM+Serif+Text:ital@0;1&display=swap');
+
+*    {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body    {
+    background-color: #f0f0f0;
+    background-image: url("/swan-bg.jpg");
+    background-size: cover; 
+}
+h1    {
+    font-family: 'Barrio', Bold;
+    color: #f6f6f6;
+    font-size: 4em;
+    text-align: center;
+}
+p    {
+    font-family: 'DM Serif Text', serif;
+    color: #e9dcdc;    
+    font-size: 2em
+    }
+ol    {
+    font-family: 'DM Serif Text', serif;
+    color: #e9dcdc;    
+    font-size: 2em
+    }
+.container  {
+        display: flex;
+        flex-wrap:wrap;
+        justify-content: center
+}
+.bg-test{
+    border: 1px solid #f9f1f1;
+    height: 100px;
+    width: 100px;
+    margin: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1em;
+}
+.hex{
+    background-color: #ff5733;  
+}
+.rgb{   
+    background-color: rgb(255, 87, 51);  
+}
+.hsl{
+    background: hsl(14, 41%, 45%); 
+}
+.rgba{
+    background: linear-gradient(45deg, rgba(255, 196, 0, 0.5), rgba(255, 87, 51, 0.5));
+}
+.linear-gradiant{
+    background: linear-gradient(45deg, rgba(16, 16, 16, 0.5), rgba(255, 252, 251, 0.5));
+}
+.radial-gradiant{
+    background: radial-gradient(circle, rgba(16, 16, 16, 0.5), rgba(255, 252, 251, 0.5));
+}  
