@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="sv" data-title="Kontakt"></html>
+<script>
+    document.getElementById("contactForm").addEventListener("submit", function(event) {
+        event.preventDefault(); // Stoppar sidan från att laddas om
+
+        // Hämtar värden från fälten
+        let name = document.getElementById("name").value;
+        let email = document.getElementById("email").value;
+        let phone = document.getElementById("phone").value;
+
+        // Visar meddelande (kan ersättas med backend-lösning om du vill skicka mejl)
+        document.getElementById("message").innerHTML = 
+            `<strong>Tack, ${name}!</strong> Vi har tagit emot din kontaktinfo.<br>Email: ${email}<br>Telefon: ${phone}`;
+
+        // Töm formuläret efter inskick
+        document.getElementById("contactForm").reset();
+    });
+</script>
+<div id="nav-placeholder"></div>
+      <script>
+        // Ladda in nav.html
+        fetch("nav.html")
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById("nav-placeholder").innerHTML = data;
+            })
+            .catch(error => console.log("Error loading navigation:", error));
+    </script>
+    <section id="contact" class="container text-center py-5">
+        <h2>Kontakt</h2>
+        <p>Fyll i formuläret för att kontakta mig!</p>
+    
+        <form id="contactForm">
+            <div class="mb-3">
+                <label for="name" class="form-label">Namn:</label>
+                <input type="text" id="name" class="form-control" required>
+            </div>
+            <div class="mb-3">
+                <label for="email" class="form-label">E-post:</label>
+                <input type="email" id="email" class="form-control" required>
+            </div>
+            <div class="mb-3">
+                <label for="phone" class="form-label">Telefon:</label>
+                <input type="tel" id="phone" class="form-control" required>
+            </div>
+            <button type="submit" class="btn btn-primary">Skicka</button>
+        </form>
+    
+        <p id="message" class="mt-3"></p>
+
+</html>
