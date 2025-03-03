@@ -1,0 +1,82 @@
+.my-container{
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 1rem;
+
+
+}
+
+.my-box{
+    width: 300px;
+    height: 150px;
+    background-color: hotpink;
+    border: 1px solid black;
+    border-radius: 15px;
+
+    transition: background-color 1s, border-radius 2s;
+
+    /* transition-property: background-color;
+    transition-duration: 0.4s; 
+    transition-delay: 0s; */
+
+}
+.my-box:hover { 
+    background-color: red; 
+    border-radius: 50%;
+  }   
+    
+.btn{   
+    background-color: chartreuse;
+    padding: 0,5rem 1rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    transition: all 1s ease;
+}
+.btn:hover{
+    background-color: purple;
+    padding: 1rem 2rem;
+    transform: rotate(5deg) scale(1.5) translate(100px);
+}
+.embiggen{
+    height: 100px;
+    width: 500px;
+    background-color: seagreen;
+    border: 2px solid black;
+}
+.embiggen:hover{
+    transform: scale(1.5);
+}       
+.wiggle-box{
+    width: 200px;
+    height: 200px;
+    background-color: yellow;   
+    animation: wiggle 1s;
+}
+.wiggle-box:hover{
+    animation: wiggle 1s infinite;
+}
+@keyframes wiggle{
+    0%{transform: scale(1);}
+    20%{transform: scale(1.1) translatex(20px);}
+    40%{transform: scale(1.1) translatex(-20px);}
+    60%{transform: scale(1.1) translatex(20px);}
+    80%{transform: scale(1.1) translatex(-20px);}
+    100%{transform: scale(1.2);}
+}
+.sliding-box   {
+    width: 100px;
+    height: 100px;
+    background-color: aqua;
+    animation: slide;
+    animation-duration: 3s;
+    /* animation-timing-function: (1, 0, 0, 1); */
+    animation-iteration-count: 2;
+
+}
+@keyframes slide{
+    0%{transform: translateX(0);}
+    25%{transform: translateX(500px);}
+    /* 50%{transform: translateX(0);}  */
+    75%{transform: translateX(-500px);} 
+    100%{transform: translateX(0px);}
+}   

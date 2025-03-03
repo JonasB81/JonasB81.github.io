@@ -1,0 +1,42 @@
+/* Bakgrund och rundade hörn för sektionen */
+.py-lg-5 {
+    background-color: aqua;
+    border-radius: 15px;
+}
+
+/* Stil för knappar */
+.btn-secondary:hover {
+    background-color: #0c2947;
+    color: #fff; /* Gör texten vit istället för mörk så den syns bättre */
+}
+
+/* Tooltip Wrapper */
+.tooltip {
+    position: relative;
+    display: inline-block;
+}
+
+/* Tooltip Text */
+.tooltip .tooltip-text {
+    visibility: hidden;
+    width: 140px;
+    background-color: black;
+    color: #fff;
+    text-align: center;
+    padding: 5px;
+    border-radius: 5px;
+    
+    position: absolute;
+    bottom: 125%; /* Placera ovanför knappen */
+    left: 50%;
+    transform: translateX(-50%);
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+    pointer-events: none; /* Gör så att texten inte blockerar klick */
+}
+
+/* Visa tooltip vid hover */
+.tooltip:hover .tooltip-text {
+    visibility: visible;
+    opacity: 1;
+}

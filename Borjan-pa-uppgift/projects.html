@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="sv" data-title="Projekt">
+    <script>
+        // Ladda in head.html
+        fetch("head.html")
+            .then(response => response.text())
+            .then(data => {
+                document.head.insertAdjacentHTML("beforeend", data);
+            })
+            .catch(error => console.log("Error loading head:", error));
+    </script>
+    <div id="nav-placeholder"></div>
+
+    <script>
+        // Ladda in nav.html
+        fetch("nav.html")
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById("nav-placeholder").innerHTML = data;
+            })
+            .catch(error => console.log("Error loading navigation:", error));
+    </script>
+
+</html>
