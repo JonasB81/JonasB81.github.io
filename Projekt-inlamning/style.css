@@ -1,7 +1,12 @@
 body {
     font-family: Arial, sans-serif;
 }
-
+.meny-logo {
+    height: 50px; 
+    width: auto;  
+    margin-right: 10px;  
+    transition: transform 0.3s ease-in-out; 
+}
 .hero {
     background: rgba(0, 0, 0, 0.5);
     padding: 100px 0;
@@ -20,4 +25,8 @@ body {
     bottom: 0;
     width: 100%;
 }
-
+h1 {
+    font-size: 50px;
+    color: rgb(255, 255, 255);
+    margin-bottom: 20px;
+}
