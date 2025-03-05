@@ -5,39 +5,75 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Om oss - Rambaren</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-    <div id="navbar-container"></div>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="container-nav">
+            <a class="navbar-brand" href="index.html">
+                <img src="/Projekt-inlamning/image/rambaren-under.jpg" alt="Rambaren logotyp" class="meny-logo">
+            </a>
 
-    <main class="container mt-5">
-        <h1>Om Rambaren</h1>
+            <!-- Hamburgarmeny Checkbox -->
+            <input type="checkbox" id="menu-toggle">
+            <label for="menu-toggle" class="menu-icon">☰</label>
 
-        <p>
-            Välkommen till Rambaren – ditt förstahandsval för professionell inramning. Vi erbjuder både standardramar
-            producerade i Söderköping och specialbyggda ramar i vår ramverkstad i Linköping City, alltid med fokus på
-            att bevara konstverken på bästa sätt.
-        </p>
+            <ul class="navbar-ul">
+                <li class="nav-item"><a class="nav-link" href="index.html">Hem</a></li>
+                <li class="nav-item"><a class="nav-link active" href="about.html">Om Rambaren</a></li>
+                <li class="nav-item"><a class="nav-link" href="gallery.html">Galleri</a></li>
+                <li class="nav-item"><a class="nav-link" href="material.html">Material</a></li>
+                <li class="nav-item"><a class="nav-link" href="contact.html">Kontakt</a></li>
+            </ul>
+        </div>
+    </nav>
 
-        <h3>Våra Tjänster</h3>
-        <p>
-            Vi arbetar utifrån dina önskemål och erbjuder flera olika prismodeller för att passa just dina behov.
-            Oavsett om du behöver en standardlösning eller en måttbeställd ram, finns vi här för att hjälpa dig.
-        </p>
+    <!-- Hero Section -->
+    <header class="hero">
+        <div class="hero-text">
+            <h1>Om Rambaren</h1>
+            <p class="lead">Vi bevarar och förhöjer dina konstverk med expertis</p>
+        </div>
+    </header>
 
-        <h3>Material och Kvalitet</h3>
-        <p>
-            Vill du veta mer om de material vi använder i våra ramar? Läs mer under material för detaljerad
-            information om materialval och hur vi säkerställer hög kvalitet i varje projekt.
-        </p>
+    <!-- Main Content Section -->
+    <main class="main-content">
+        <section class="container">
+            <h2>Välkommen till Rambaren</h2>
+            <p>
+                Rambaren är ditt förstahandsval för professionell inramning. Vi erbjuder både standardramar producerade
+                i Söderköping
+                och specialbyggda ramar i vår ramverkstad i Linköping City, alltid med fokus på att bevara konstverken
+                på bästa sätt.
+            </p>
 
+            <h3>Våra Tjänster</h3>
+            <p>
+                Vi arbetar utifrån dina önskemål och erbjuder flera olika prismodeller för att passa just dina behov.
+                Oavsett om du behöver en standardlösning eller en måttbeställd ram, finns vi här för att hjälpa dig.
+            </p>
+
+            <h3>Material och Kvalitet</h3>
+            <p>
+                Vill du veta mer om de material vi använder i våra ramar? Läs mer under
+                <a href="material.html">Material</a> för detaljerad information om materialval och hur vi säkerställer
+                hög kvalitet i varje projekt.
+            </p>
+        </section>
     </main>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="script.js"></script>
+    <!-- Footer -->
+    <footer class="footer-container">
+        <p>&copy; 2025 Rambaren By Art'n'Design. Alla rättigheter förbehållna.</p>
+        <div class="footer-content">
+            <p><i class="fas fa-envelope"></i> E-post: <a href="mailto:info@rambaren.se">info@rambaren.se</a></p>
+            <p><i class="fas fa-phone"></i> Telefon: <a href="tel:+46701234567">+46 70 123 45 67</a></p>
+        </div>
+    </footer>
 
 </body>
 

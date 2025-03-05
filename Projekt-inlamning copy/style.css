@@ -1,0 +1,189 @@
+body {
+    font-family: Arial, sans-serif;
+}
+
+nav {
+    position: fixed;
+    /* Fixerad navbar */
+    top: 0;
+    width: 100%;
+    background-color: #343a40;
+    /* Se till att bakgrunden täcker allt */
+    z-index: 1000;
+    /* Håller den ovanför andra element */
+}
+
+.meny-logo {
+    
+    height: 50px;
+    width: auto;
+    margin-right: 10px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.hero {
+    height: 50vh;
+    background: url('/Projekt-inlamning/image/_DSF0151.jpg') center/cover no-repeat;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top:300px; /* Justera baserat på navbarens höjd */
+}
+
+.footer-container {
+    background: #333;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+h1 {
+    font-size: 50px;
+    color: rgb(255, 255, 255);
+    margin-bottom: 20px;
+}
+
+h2 {
+    font-size: 30px;
+    color: rgb(34, 33, 33);
+    margin-bottom: 20px;
+}
+
+h3 {
+    font-size: 20px;
+    color: rgb(255, 255, 255);
+    margin-bottom: 20px;
+}
+
+.navbar{
+
+    display: flex;
+
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+    min-width: 100%;;
+    margin: auto;
+}
+.container-nav{
+
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 20px;
+    padding: 20px;
+    min-width: 100%;;
+}
+
+.container-nav ul{
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    padding: 20px;
+    min-width: 100%;;
+}
+
+.container-glass {
+    max-width: 800px;
+    margin: auto;
+}
+.container-card {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 20px;
+    padding: 20px;
+    min-width: 100%;;
+}
+.hero-text {
+    padding: 2em;
+    background-color: #666666a0;
+    border-radius: 10px;
+
+}
+
+.card {
+    width: 30%;
+    min-width: 250px;
+    /* Anpassar sig för mindre skärmar */
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-align: center;
+}
+
+.card:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.card-body {
+    padding: 15px;
+}
+
+.card-body h5 {
+    margin: 10px 0;
+    font-size: 1.2em;
+}
+
+.card-body p {
+    font-size: 1em;
+    color: #666;
+}
+
+
+/* ======= Anpassad styling för Before/After Jämförelsen (TwentyTwenty) ======= */
+.container-glass {
+    text-align: center;
+    padding: 20px;
+}
+
+.twentytwenty-container img {
+    width: 100%;
+    /* Sätter bilderna till 100% bredd */
+    height: auto;
+    /* Anpassar höjden efter bredden */
+}
+
+.twentytwenty-container {
+    max-width: 800px;
+    /* Sätter maxbredd för bildjämförelsen */
+    margin: auto;
+    /* Centrerar den */
+    border-radius: 10px;
+    /* Rundade hörn */
+    overflow: hidden;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+/* Justera storleken på TwentyTwenty handtaget */
+.twentytwenty-handle {
+    background-color: white;
+    border: 2px solid #333;
+
+}
+
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .card {
+        width: 90%;
+    }
+}

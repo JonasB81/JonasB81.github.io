@@ -1,32 +1,308 @@
+/* ======= Globala variabler med :root ======= */
+:root {
+    --primary-color: #343a40;   /* Navbar & bakgrund */
+    --secondary-color: #ffd700; /* Hover-effekt & highlights */
+    --text-color: #ffffff;      /* Standard textfärg */
+    --footer-bg: #333;          /* Footer bakgrund */
+    --hero-bg: rgba(102, 102, 102, 0.6); /* Semi-transparent bakgrund i hero */
+    --hover-color: #a8a7a3;     /* Färg vid hover */
+    --link-hover: #47453b;      /* Underline animation */
+    --main-color: #333;         /* Huvudtextfärg */
+    --font-family: Arial, sans-serif;
+}
+
+/* ======= Grundläggande styling ======= */
 body {
-    font-family: Arial, sans-serif;
-}
-.meny-logo {
-    height: 50px; 
-    width: auto;  
-    margin-right: 10px;  
-    transition: transform 0.3s ease-in-out; 
-}
-.hero {
-    background: rgba(0, 0, 0, 0.5);
-    padding: 100px 0;
-    text-align: center;
-    color: white;
+    font-family: var(--font-family);
     display: flex;
-    align-items: center;
-    justify-content: center;
+    flex-direction: column;
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    color: var(--text-color);
 }
-.footer-container {
-    background: #333;
-    color: white;
-    text-align: center;
-    padding: 10px 0;
+
+/* ======= Navbar Styling ======= */
+.navbar {
     position: fixed;
-    bottom: 0;
+    top: 0;
+    width: 100%;
+    background-color: var(--primary-color);
+    z-index: 1000;
+    padding: 10px 20px;
+}
+
+.container-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+}
+
+.meny-logo {
+    height: 50px;
+    width: auto;
+    transition: transform 0.3s ease-in-out;
+}
+
+/* Hamburgarmeny */
+#menu-toggle {
+    display: none;
+}
+
+.menu-icon {
+    display: none;
+    font-size: 30px;
+    color: var(--text-color);
+    cursor: pointer;
+    padding: 10px;
+}
+
+/* Menylista */
+.navbar-ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    margin: 0;
+    padding: 0;
+}
+
+/* Menylänkar */
+.nav-item {
+    padding: 10px;
+}
+
+.nav-link {
+    color: var(--text-color);
+    text-decoration: none;
+    font-size: 18px;
+    position: relative;
+    padding: 10px;
+    transition: color 0.3s ease-in-out;
+}
+
+/* Hover-effekt för navbar */
+.navbar-ul .nav-link::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -3px;
+    width: 0;
+    height: 2px;
+    background-color: var(--link-hover);
+    transition: width 0.3s ease-in-out;
+}
+
+.navbar-ul .nav-link:hover::after {
     width: 100%;
 }
-h1 {
-    font-size: 50px;
-    color: rgb(255, 255, 255);
+
+.navbar-ul .nav-link:hover {
+    color: var(--hover-color);
+}
+
+/* ======= Hero-sektionen ======= */
+.hero {
+    background: url('/Projekt-inlamning/image/_DSF0151.jpg') center/cover no-repeat;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: 100px;
+    height: 40vh;
+    text-align: center;
+}
+
+.hero-text {
+    padding: 2em;
+    background-color: var(--hero-bg);
+    border-radius: 10px;
+}
+
+/* ======= Main Content ======= */
+.main-content {
+    padding: 50px 20px;
+    text-align: center;
+    max-width: 1200px;
+    margin: auto;
+    color: var(--main-color);
+}
+
+/* ======= Footer Styling ======= */
+.footer-container {
+    background: var(--footer-bg);
+    color: var(--text-color);
+    text-align: center;
+    padding: 20px 0;
+    width: 100%;
+    margin-top: auto;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.footer-content i {
+    color: var(--text-color);
+    margin-right: 8px;
+}
+
+.footer-content a {
+    color: var(--text-color);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.footer-content a:hover {
+    color: var(--link-hover);
+}
+
+/* ======= Kontaktformulär Styling ======= */
+.contact-container {
+    max-width: 600px;
+    margin: auto;
+    text-align: center;
+    padding: 40px;
+}
+
+.contact-container h2 {
+    font-size: 28px;
+    color: var(--main-color);
     margin-bottom: 20px;
+}
+
+/* Formulärfält */
+#contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+#contact-form label {
+    font-weight: bold;
+    text-align: left;
+}
+
+#contact-form input,
+#contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+/* Anpassning för textarea */
+#contact-form textarea {
+    height: 150px;
+    resize: none;
+}
+
+/* Skicka-knapp */
+.btn {
+    background-color: var(--primary-color);
+    color: var(--text-color);
+    padding: 10px 20px;
+    font-size: 18px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.btn:hover {
+    background-color: var(--hover-color);
+}
+/* ======= Kort (Cards) ======= */
+.container-card {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 20px;
+}
+
+.card {
+    width: 30%;
+    min-width: 250px;
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-align: center;
+}
+
+.card:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.card-body {
+    padding: 15px;
+}
+
+.card-body h5 {
+    margin: 10px 0;
+    font-size: 1.2em;
+}
+
+.card-body p {
+    font-size: 1em;
+    color: #666;
+}
+
+/* ======= Mobilanpassning ======= */
+@media (max-width: 768px) {
+    .menu-icon {
+        display: block;
+    }
+
+    .navbar-ul {
+        display: none;
+        flex-direction: column;
+        background: var(--primary-color);
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        padding: 10px 0;
+        text-align: center;
+    }
+
+    #menu-toggle:checked + .menu-icon + .navbar-ul {
+        display: flex;
+    }
+
+    /* Hero */
+    .hero {
+        padding-top: 120px;
+        height: 30vh;
+    }
+
+    /* Cards */
+    .container-card {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .card {
+        width: 90%;
+    }
+
+    /* Footer */
+    .footer-content {
+        flex-direction: column;
+        gap: 10px;
+    }
 }
