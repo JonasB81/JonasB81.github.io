@@ -1,17 +1,21 @@
-/* ======= Globala variabler med :root ======= */
+/* ============================== */
+/*         GLOBALA VARIABLER      */
+/* ============================== */
 :root {
-    --primary-color: #343a40;   /* Navbar & bakgrund */
-    --secondary-color: #ffd700; /* Hover-effekt & highlights */
-    --text-color: #ffffff;      /* Standard textfärg */
-    --footer-bg: #333;          /* Footer bakgrund */
-    --hero-bg: rgba(102, 102, 102, 0.6); /* Semi-transparent bakgrund i hero */
-    --hover-color: #a8a7a3;     /* Färg vid hover */
-    --link-hover: #47453b;      /* Underline animation */
-    --main-color: #333;         /* Huvudtextfärg */
+    --primary-color: #343a40;
+    --secondary-color: #ffd700;
+    --text-color: #ffffff;
+    --footer-bg: #333;
+    --hero-bg: rgba(102, 102, 102, 0.6);
+    --hover-color: #a8a7a3;
+    --link-hover: #47453b;
+    --main-color: #333;
     --font-family: Arial, sans-serif;
 }
 
-/* ======= Grundläggande styling ======= */
+/* ============================== */
+/*      GRUNDLÄGGANDE STYLING     */
+/* ============================== */
 body {
     font-family: var(--font-family);
     display: flex;
@@ -22,7 +26,9 @@ body {
     color: var(--text-color);
 }
 
-/* ======= Navbar Styling ======= */
+/* ============================== */
+/*            NAVBAR              */
+/* ============================== */
 .navbar {
     position: fixed;
     top: 0;
@@ -45,7 +51,6 @@ body {
     transition: transform 0.3s ease-in-out;
 }
 
-/* Hamburgarmeny */
 #menu-toggle {
     display: none;
 }
@@ -58,7 +63,6 @@ body {
     padding: 10px;
 }
 
-/* Menylista */
 .navbar-ul {
     list-style: none;
     display: flex;
@@ -67,7 +71,6 @@ body {
     padding: 0;
 }
 
-/* Menylänkar */
 .nav-item {
     padding: 10px;
 }
@@ -81,7 +84,7 @@ body {
     transition: color 0.3s ease-in-out;
 }
 
-/* Hover-effekt för navbar */
+/* Understreck på hover */
 .navbar-ul .nav-link::after {
     content: "";
     position: absolute;
@@ -101,7 +104,9 @@ body {
     color: var(--hover-color);
 }
 
-/* ======= Hero-sektionen ======= */
+/* ============================== */
+/*          HERO-SEKTION          */
+/* ============================== */
 .hero {
     background: url('/Projekt-inlamning/image/hero.jpg') center/cover no-repeat;
     display: flex;
@@ -119,7 +124,9 @@ body {
     border-radius: 10px;
 }
 
-/* ======= Main Content ======= */
+/* ============================== */
+/*          HUVUDINNEHÅLL         */
+/* ============================== */
 .main-content {
     padding: 50px 20px;
     text-align: center;
@@ -128,7 +135,9 @@ body {
     color: var(--main-color);
 }
 
-/* ======= Footer Styling ======= */
+/* ============================== */
+/*             FOOTER             */
+/* ============================== */
 .footer-container {
     background: var(--footer-bg);
     color: var(--text-color);
@@ -160,7 +169,9 @@ body {
     color: var(--link-hover);
 }
 
-/* ======= Kontaktformulär Styling ======= */
+/* ============================== */
+/*         KONTAKTFORMULÄR        */
+/* ============================== */
 .contact-container {
     max-width: 600px;
     margin: auto;
@@ -174,7 +185,6 @@ body {
     margin-bottom: 20px;
 }
 
-/* Formulärfält */
 #contact-form {
     display: flex;
     flex-direction: column;
@@ -195,13 +205,11 @@ body {
     font-size: 16px;
 }
 
-/* Anpassning för textarea */
 #contact-form textarea {
     height: 150px;
     resize: none;
 }
 
-/* Skicka-knapp */
 .btn {
     background-color: var(--primary-color);
     color: var(--text-color);
@@ -216,7 +224,10 @@ body {
 .btn:hover {
     background-color: var(--hover-color);
 }
-/* ======= Kort (Cards) ======= */
+
+/* ============================== */
+/*             CARDS              */
+/* ============================== */
 .container-card {
     display: flex;
     justify-content: space-evenly;
@@ -262,47 +273,40 @@ body {
     color: #666;
 }
 
-/* ======= Mobilanpassning ======= */
-@media (max-width: 768px) {
-    .menu-icon {
-        display: block;
-    }
+/* ============================== */
+/*       Lightbox-styling         */
+/* ============================== */
 
-    .navbar-ul {
-        display: none;
-        flex-direction: column;
-        background: var(--primary-color);
-        position: absolute;
-        top: 60px;
-        left: 0;
-        width: 100%;
-        padding: 10px 0;
-        text-align: center;
-    }
+.lightbox {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
 
-    #menu-toggle:checked + .menu-icon + .navbar-ul {
-        display: flex;
-    }
+.lightbox-img {
+    max-width: 90%;
+    max-height: 90%;
+    border-radius: 5px;
+    box-shadow: 0px 4px 6px rgba(255, 255, 255, 0.2);
+}
 
-    /* Hero */
-    .hero {
-        padding-top: 120px;
-        height: 30vh;
-    }
+.close-lightbox {
+    position: absolute;
+    top: 20px;
+    right: 40px;
+    font-size: 40px;
+    color: white;
+    cursor: pointer;
+    transition: 0.3s;
+}
 
-    /* Cards */
-    .container-card {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .card {
-        width: 90%;
-    }
-
-    /* Footer */
-    .footer-content {
-        flex-direction: column;
-        gap: 10px;
-    }
+.close-lightbox:hover {
+    color: var(--secondary-color);
 }

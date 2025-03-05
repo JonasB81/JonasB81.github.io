@@ -9,3 +9,12 @@ $(window).on("load", function () {
 document.getElementById("mobile-menu").addEventListener("click", function () {
     document.querySelector(".navbar-ul").classList.toggle("active");
 });
+
+function openLightbox(imageSrc) {
+    document.getElementById("lightbox").style.display = "flex";
+    document.getElementById("lightbox-img").src = imageSrc;
+}
+
+function closeLightbox() {
+    document.getElementById("lightbox").style.display = "none";
+}
