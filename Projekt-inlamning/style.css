@@ -103,7 +103,7 @@ body {
 
 /* ======= Hero-sektionen ======= */
 .hero {
-    background: url('/Projekt-inlamning/image/_DSF0151.jpg') center/cover no-repeat;
+    background: url('/Projekt-inlamning/image/hero.jpg') center/cover no-repeat;
     display: flex;
     flex-direction: column;
     justify-content: center;
