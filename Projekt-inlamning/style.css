@@ -104,6 +104,34 @@ body {
     color: var(--hover-color);
 }
 
+/* Mobilanpassning */
+@media (max-width: 768px) {
+    .menu-icon {
+        display: block;
+    }
+
+    .navbar-ul {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        background-color: var(--primary-color);
+        padding: 10px 0;
+        text-align: center;
+    }
+
+    /* När checkboxen är ikryssad ska menyn visas */
+    #menu-toggle:checked ~ .navbar-ul {
+        display: flex;
+    }
+
+    .navbar-ul .nav-item {
+        padding: 10px 0;
+    }
+}
+
 /* ============================== */
 /*          HERO-SEKTION          */
 /* ============================== */
@@ -357,4 +385,20 @@ body {
 
 .close-lightbox:hover {
     color: var(--secondary-color);
+}
+
+/* ============================== */
+/*       MEDIA QUERIES            */
+/* ============================== */
+@media (max-width: 768px) {
+    .services-container {
+        padding: 30px 15px;
+    }
+    .services-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+    .services-container h3 {
+        font-size: 2rem;
+    }
 }
